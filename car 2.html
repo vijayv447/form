@@ -1,0 +1,129 @@
+Example : form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <style>
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+       }
+
+
+       body {
+           background-color: #f2f2f2;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+       }
+
+
+       .container {
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           width: 100%;
+           max-width: 600px;
+       }
+
+
+       h2 {
+           margin-bottom: 20px;
+           text-align: center;
+       }
+
+
+       .form-group {
+           margin-bottom: 15px;
+       }
+
+
+       .form-group label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+       }
+
+
+       .form-group input,
+       .form-group textarea,
+       .form-group button {
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+       }
+
+
+       .form-group .radio-group {
+           display: flex;
+           justify-content: space-between;
+       }
+
+
+       .form-group .radio-group label {
+           font-weight: normal;
+       }
+
+
+       .form-group button {
+           background-color: #4CAF50;
+           color: white;
+           border: none;
+           cursor: pointer;
+       }
+
+
+       .form-group button:hover {
+           background-color: #45a049;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <h2>Registration Form</h2>
+       <form action="/submit_registration" method="POST">
+           <div class="form-group">
+               <label for="name">name:</label>
+               <input type="text" id="name" name="name" required>
+           </div>
+           <div class="form-group">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+           </div>
+           <div class="form-group">
+               <label for="phone number">phone number:</label>
+               <input type="phone numbers" id="phone number" name="phone number" required>
+           </div>
+           <div class="form-group">
+               <label for="comments">Comments:</label>
+               <textarea id="comments" name="comments" rows="4"></textarea>
+           </div>
+           <div class="form-group">
+               <label>Gender:</label>
+               <div class="radio-group">
+                   <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+                   <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+                   <label for="other"><input type="radio" id="other" name="gender" value="other"> Other</label>
+               </div>
+           </div>
+           <div class="form-group">
+               <label for="agree">Agree to terms:</label>
+               <input type="checkbox" id="agree" name="agree" value="yes" required>
+           </div>
+           <div class="form-group">
+               <button type="submit">Register</button>
+           </div>
+       </form>
+   </div>
+</body>
+</html>
+
+
+
